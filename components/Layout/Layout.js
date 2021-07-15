@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Header from "./Header"
+import Footer from "./Footer"
 
 export const Layout = ({ children }) => {
     return (
@@ -6,9 +8,6 @@ export const Layout = ({ children }) => {
             <Head>
                 <title>Martin Choutka - Programování</title>
                 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-                <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
                 <meta name="author" content="Martin Choutka" />
                 <meta
                     name="description"
@@ -22,7 +21,9 @@ export const Layout = ({ children }) => {
                     content="https://www.martinchoutka.cz/avatar.jpg"
                 />
             </Head>
+            <Header />
             {children}
+            <Footer />
         </div>
     );
 };
