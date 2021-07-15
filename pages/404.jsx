@@ -5,7 +5,7 @@ export default function NotFound() {
     return (
         <>
             <Head>
-                <title>Create Next App</title>
+                <title>Martin Choutka - 404</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="my-10 mx-auto max-w-7xl px-4 sm:my-12 sm:px-6 md:my-16 lg:my-20 lg:px-8 xl:my-28">

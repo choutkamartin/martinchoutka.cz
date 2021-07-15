@@ -16,8 +16,7 @@ export default function Blog() {
     return (
         <>
             <Head>
-                <title>Create Next App</title>
-                <link rel="icon" href="/favicon.ico" />
+                <title>Martin Choutka - Blog</title>
             </Head>
             <main className="my-10 mx-auto max-w-7xl px-4 sm:my-12 sm:px-6 md:my-16 lg:my-20 lg:px-8 xl:my-28">
                 <div className="mb-8 text-center">
@@ -34,7 +33,7 @@ export default function Blog() {
                                 <p className="text-gray-500 tracking-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi optio soluta, quis explicabo corrupti voluptates sunt eum animi doloremque aspernatur itaque inventore! Quis similique architecto itaque molestias unde hic corrupti.</p>
                             </div>
                             <div className="flex items-center">
-                                <Image src="/avatar.jpg" height="40" width="40" className="rounded-full" alt="Fotografie autora příspěvku"/>
+                                <Image src="/avatar.jpg" height="40" width="40" className="rounded-full" alt="Fotografie autora příspěvku" />
                                 <div className="ml-3">
                                     <h3 className="text-md font-semibold">Martin Choutka</h3>
                                     <p className="text-md text-gray-400">2. 4. 2021 • 5 min. čtení</p>
@@ -51,7 +50,7 @@ export default function Blog() {
                                 <p className="text-gray-500 tracking-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi optio soluta, quis explicabo corrupti voluptates sunt eum animi doloremque aspernatur itaque inventore! Quis similique architecto itaque molestias unde hic corrupti.</p>
                             </div>
                             <div className="flex items-center">
-                                <Image src="/avatar.jpg" height="40" width="40" className="rounded-full" alt="Fotografie autora příspěvku"/>
+                                <Image src="/avatar.jpg" height="40" width="40" className="rounded-full" alt="Fotografie autora příspěvku" />
                                 <div className="ml-3">
                                     <h3 className="text-md font-semibold">Martin Choutka</h3>
                                     <p className="text-md text-gray-400">2. 4. 2021 • 5 min. čtení</p>
@@ -68,7 +67,7 @@ export default function Blog() {
                                 <p className="text-gray-500 tracking-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi optio soluta, quis explicabo corrupti voluptates sunt eum animi doloremque aspernatur itaque inventore! Quis similique architecto itaque molestias unde hic corrupti.</p>
                             </div>
                             <div className="flex items-center">
-                                <Image src="/avatar.jpg" height="40" width="40" className="rounded-full" alt="Fotografie autora příspěvku"/>
+                                <Image src="/avatar.jpg" height="40" width="40" className="rounded-full" alt="Fotografie autora příspěvku" />
                                 <div className="ml-3">
                                     <h3 className="text-md font-semibold">Martin Choutka</h3>
                                     <p className="text-md text-gray-400">2. 4. 2021 • 5 min. čtení</p>

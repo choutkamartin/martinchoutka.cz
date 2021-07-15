@@ -16,8 +16,7 @@ export default function Article() {
     return (
         <>
             <Head>
-                <title>Create Next App</title>
-                <link rel="icon" href="/favicon.ico" />
+                <title>Martin Choutka - Článek</title>
             </Head>
             <main className="my-10 mx-auto max-w-7xl px-4 sm:my-12 sm:px-6 md:my-16 lg:my-20 lg:px-8 xl:my-28">
                 <div className="mb-8 text-center">
