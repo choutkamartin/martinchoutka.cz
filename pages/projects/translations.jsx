@@ -25,7 +25,7 @@ export default function Translations() {
           <div className="mb-12">
             <span className="mr-8">
               <Image
-                src="/icons/bitwarden.svg"
+                src="/icons/bitwarden-shield.svg"
                 width="50"
                 height="50"
                 alt="Logo knihovny React"
@@ -33,7 +33,7 @@ export default function Translations() {
             </span>
             <span className="mr-8">
               <Image
-                src="/icons/bitwarden.svg"
+                src="/icons/bouncer.svg"
                 width="50"
                 height="50"
                 alt="Logo knihovny React"
@@ -41,7 +41,7 @@ export default function Translations() {
             </span>
             <span>
               <Image
-                src="/icons/bitwarden.svg"
+                src="/icons/sharex.svg"
                 width="50"
                 height="50"
                 alt="Logo knihovny React"
@@ -83,7 +83,8 @@ export default function Translations() {
                   Působení: červen 2019 - doteď
                 </p>
                 <a
-                  href="#"
+                  href="https://bitwarden.com/"
+                  target="_blank"
                   className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-md font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                 >
                   Stránka projektu
@@ -96,7 +97,7 @@ export default function Translations() {
               </div>
               <div className="mr-16">
                 <Image
-                  src="/icons/bitwarden.svg"
+                  src="/icons/bouncer.svg"
                   width="96"
                   height="96"
                   alt="Logo knihovny React"
@@ -115,7 +116,8 @@ export default function Translations() {
                   Působení: červen 2019 - doteď
                 </p>
                 <a
-                  href="#"
+                  href="https://samruston.com/"
+                  target="_blank"
                   className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-md font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                 >
                   Stránka projektu
@@ -128,7 +130,7 @@ export default function Translations() {
               </div>
               <div className="mr-16">
                 <Image
-                  src="/icons/bitwarden.svg"
+                  src="/icons/sharex.svg"
                   width="96"
                   height="96"
                   alt="Logo knihovny React"
@@ -137,18 +139,18 @@ export default function Translations() {
               <div>
                 <h2 className="text-2xl font-bold">ShareX</h2>
                 <p className="text-lg font-bold text-gray-500 mb-2">
-                  Správce hesel, dostupný na drtivé většině zařízení
+                  Ten nejlepší program na screenshoty pro Windows
                 </p>
                 <p className="text-md font-medium text-gray-500">
-                  Projekt překládám průběžně od června 2019. Za tu dobu jsem se
-                  podílel na překladu 350+ řetězců spolu s ostatními
-                  překladateli.
+                  Projekt překládám průběžně od července 2021. Do projektu
+                  přispívám také kódem.
                 </p>
                 <p className="text-md font-medium text-gray-500 mb-6">
-                  Působení: červen 2019 - doteď
+                  Působení: červen 2021 - doteď
                 </p>
                 <a
-                  href="#"
+                  href="https://getsharex.com/"
+                  target="_blank"
                   className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-md font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                 >
                   Stránka projektu

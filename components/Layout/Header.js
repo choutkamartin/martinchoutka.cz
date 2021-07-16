@@ -27,7 +27,7 @@ const solutions = [
   {
     name: "Webové stránky",
     description: "Tvorba webových stránek pro malé firmy",
-    href: "#",
+    href: "/projects/websites",
     icon: GlobeIcon,
   },
   {
