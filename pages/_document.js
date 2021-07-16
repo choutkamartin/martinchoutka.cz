@@ -19,7 +19,7 @@ class MyDocument extends Document {
                         content="https://www.martinchoutka.cz/avatar.jpg"
                     />
                 </Head>
-                <body>
+                <body className="dark:bg-gray-900">
                     <Main />
                     <NextScript />
                 </body>
