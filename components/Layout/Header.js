@@ -21,7 +21,7 @@ const solutions = [
     {
         name: 'Překlad',
         description: 'Překlady aplikací a programů do českého jazyka',
-        href: '#',
+        href: '/projects/translations',
         icon: TranslateIcon,
     },
     {
@@ -72,7 +72,7 @@ export default function Example() {
             {({ open }) => (
                 <>
                     <div className="max-w-7xl mx-auto px-4 sm:px-6">
-                        <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+                        <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10 dark:border-white">
                             <div className="flex justify-start lg:w-0 lg:flex-1">
                                 <a href="#">
                                     <span className="sr-only">Martin Choutka</span>
@@ -86,7 +86,7 @@ export default function Example() {
                                 </a>
                             </div>
                             <div className="-mr-2 -my-2 md:hidden">
-                                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                <Popover.Button className="bg-white dark:bg-black rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                                     <span className="sr-only">Open menu</span>
                                     <MenuIcon className="h-6 w-6" aria-hidden="true" />
                                 </Popover.Button>
@@ -97,8 +97,8 @@ export default function Example() {
                                         <>
                                             <Popover.Button
                                                 className={classNames(
-                                                    open ? 'text-gray-900' : 'text-gray-500',
-                                                    'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-8 focus:ring-indigo-500'
+                                                    open ? 'text-gray-900 dark:text-gray-200' : 'text-gray-500 dark:text-gray-200',
+                                                    'group bg-white dark:bg-gray-900 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-8 focus:ring-indigo-500 dark:ring-offset-gray-900'
                                                 )}
                                             >
                                                 <span>Projekty & Tvorba</span>
@@ -126,29 +126,29 @@ export default function Example() {
                                                     className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
                                                 >
                                                     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                                        <div className="relative grid gap-6 bg-white dark:bg-gray-900 px-5 py-6 sm:gap-8 sm:p-8">
                                                             {solutions.map((item) => (
                                                                 <Link href={item.href} key={item.name}>
                                                                     <a
-                                                                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                                                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
                                                                     >
                                                                         <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
                                                                         <div className="ml-4">
-                                                                            <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                                                            <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                                                            <p className="text-base font-medium text-gray-900 dark:text-gray-200">{item.name}</p>
+                                                                            <p className="mt-1 text-sm text-gray-500 dark:text-gray-300">{item.description}</p>
                                                                         </div>
                                                                     </a>
                                                                 </Link>
                                                             ))}
                                                         </div>
-                                                        <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                                                        <div className="px-5 py-5 bg-gray-50 dark:bg-gray-800 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                                                             {callsToAction.map((item) => (
                                                                 <div key={item.name} className="flow-root">
                                                                     <a
                                                                         href={item.href}
-                                                                        className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
+                                                                        className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-900"
                                                                     >
-                                                                        <item.icon className="flex-shrink-0 h-6 w-6 text-gray-400" aria-hidden="true" />
+                                                                        <item.icon className="flex-shrink-0 h-6 w-6 text-gray-400 dark:text-gray-200" aria-hidden="true" />
                                                                         <span className="ml-3">{item.name}</span>
                                                                     </a>
                                                                 </div>
@@ -161,12 +161,12 @@ export default function Example() {
                                     )}
                                 </Popover>
                                 <Link href="/about-me">
-                                    <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                                    <a className="text-base font-medium text-gray-500 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-200">
                                         O mně
                                     </a>
                                 </Link>
                                 <Link href="/blog">
-                                    <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                                    <a className="text-base font-medium text-gray-500 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-200">
                                         Blog
                                     </a>
                                 </Link>
@@ -175,8 +175,8 @@ export default function Example() {
                                         <>
                                             <Popover.Button
                                                 className={classNames(
-                                                    open ? 'text-gray-900' : 'text-gray-500',
-                                                    'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-8 focus:ring-indigo-500'
+                                                    open ? 'text-gray-900 dark:text-gray-200' : 'text-gray-500 dark:text-gray-200',
+                                                    'group bg-white dark:bg-gray-900 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-8 focus:ring-indigo-500 dark:ring-offset-gray-900'
                                                 )}
                                             >
                                                 <span>Více</span>
@@ -204,30 +204,30 @@ export default function Example() {
                                                     className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0"
                                                 >
                                                     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                                        <div className="relative grid gap-6 bg-white dark:bg-gray-900 px-5 py-6 sm:gap-8 sm:p-8">
                                                             {resources.map((item) => (
                                                                 <a
                                                                     key={item.name}
                                                                     href={item.href}
-                                                                    className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                                                    className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800"
                                                                 >
                                                                     <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
                                                                     <div className="ml-4">
-                                                                        <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                                                        <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                                                        <p className="text-base font-medium text-gray-900 dark:text-gray-200">{item.name}</p>
+                                                                        <p className="mt-1 text-sm text-gray-500 dark:text-gray-300">{item.description}</p>
                                                                     </div>
                                                                 </a>
                                                             ))}
                                                         </div>
-                                                        <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
+                                                        <div className="px-5 py-5 bg-gray-50 dark:bg-gray-800 sm:px-8 sm:py-8">
                                                             <div>
-                                                                <h3 className="text-sm tracking-wide font-medium text-gray-500 uppercase">
+                                                                <h3 className="text-sm tracking-wide font-medium text-gray-500 dark:text-gray-200 uppercase">
                                                                     Nedávné příspěvky
                                                                 </h3>
                                                                 <ul className="mt-4 space-y-4">
                                                                     {recentPosts.map((post) => (
                                                                         <li key={post.id} className="text-base truncate">
-                                                                            <a href={post.href} className="font-medium text-gray-900 hover:text-gray-700">
+                                                                            <a href={post.href} className="font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-200">
                                                                                 {post.name}
                                                                             </a>
                                                                         </li>
@@ -249,7 +249,7 @@ export default function Example() {
                                 </Popover>
                             </Popover.Group>
                             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                                <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                                <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-200">
                                     Přihlásit se
                                 </a>
                             </div>
@@ -308,11 +308,11 @@ export default function Example() {
                                 <div className="py-6 px-5 space-y-6">
                                     <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                                         <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                                            Pricing
+                                            O mně
                                         </a>
 
                                         <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                                            Docs
+                                            O webu
                                         </a>
                                         {resources.map((item) => (
                                             <a
