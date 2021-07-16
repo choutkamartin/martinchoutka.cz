@@ -1,4 +1,4 @@
-import 'tailwindcss/tailwind.css'
+import "tailwindcss/tailwind.css";
 import { appWithTranslation } from "next-i18next";
 import { Layout } from "../components/Layout/Layout";
 import { Provider } from "next-auth/client";
