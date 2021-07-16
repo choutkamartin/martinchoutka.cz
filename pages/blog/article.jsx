@@ -107,7 +107,13 @@ function Article({ data, router }) {
             <li>Třetí odrážka</li>
           </ol>
           <figure className="mb-3">
-            <Image src="/car.jpg" alt="Fotografie auta na silnici" />
+            <Image
+              src="/car.jpg"
+              alt="Fotografie auta na silnici"
+              width="500"
+              height="300"
+              objectFit="cover"
+            />
             <figcaption className="font-medium text-gray-400">
               Auto s krajinou
             </figcaption>
