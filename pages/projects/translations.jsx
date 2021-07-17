@@ -85,6 +85,7 @@ export default function Translations() {
                 <a
                   href="https://bitwarden.com/"
                   target="_blank"
+                  rel="noreferrer"
                   className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-md font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                 >
                   Stránka projektu
@@ -118,6 +119,7 @@ export default function Translations() {
                 <a
                   href="https://samruston.com/"
                   target="_blank"
+                  rel="noreferrer"
                   className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-md font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                 >
                   Stránka projektu
@@ -151,6 +153,7 @@ export default function Translations() {
                 <a
                   href="https://getsharex.com/"
                   target="_blank"
+                  rel="noreferrer"
                   className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-md font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                 >
                   Stránka projektu

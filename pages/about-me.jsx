@@ -34,7 +34,7 @@ export default function AboutMe() {
             sunt? Voluptate ducimus, reiciendis voluptatum accusantium vitae
             nesciunt nisi deserunt possimus tempora repellendus.
           </p>
-          <Image src="/icons/czu.svg" width="250" height="100" />
+          <Image src="/icons/czu.svg" width="250" height="100" alt="Logo ČZU" />
         </div>
       </main>
     </>

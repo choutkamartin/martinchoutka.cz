@@ -66,7 +66,12 @@ export default function Websites() {
             </a>
           </div>
           <div>
-            <Image src="/web-showcase.png" height="800" width="800" />
+            <Image
+              src="/web-showcase.png"
+              height="800"
+              width="800"
+              alt="Monitor s webovou stránkou"
+            />
           </div>
         </div>
       </main>
