@@ -65,7 +65,7 @@ function Blog({ data, router }) {
           </p>
         </div>
         <section className="grid grid-cols-3 gap-10 mt-4 mb-8">
-          <article className="shadow-lg rounded-lg overflow-hidden">
+          <article className="shadow-md rounded-lg overflow-hidden">
             <div
               className="w-full h-40 bg-cover bg-center"
               style={{ backgroundImage: `url(/background.jpg)` }}
@@ -100,7 +100,7 @@ function Blog({ data, router }) {
               </div>
             </div>
           </article>
-          <article className="shadow-lg rounded-lg overflow-hidden">
+          <article className="shadow-md rounded-lg overflow-hidden">
             <div
               className="w-full h-40 bg-cover bg-center"
               style={{ backgroundImage: `url(/car.jpg)` }}
@@ -135,7 +135,7 @@ function Blog({ data, router }) {
               </div>
             </div>
           </article>
-          <article className="shadow-lg rounded-lg overflow-hidden">
+          <article className="shadow-md rounded-lg overflow-hidden">
             <div
               className="w-full h-40 bg-cover bg-center"
               style={{ backgroundImage: `url(/nature.jpg)` }}
@@ -170,7 +170,7 @@ function Blog({ data, router }) {
               </div>
             </div>
           </article>
-          <article className="shadow-lg rounded-lg overflow-hidden">
+          <article className="shadow-md rounded-lg overflow-hidden">
             <div
               className="w-full h-40 bg-cover bg-center"
               style={{ backgroundImage: `url(/beach.jpg)` }}
@@ -205,7 +205,7 @@ function Blog({ data, router }) {
               </div>
             </div>
           </article>
-          <article className="shadow-lg rounded-lg overflow-hidden">
+          <article className="shadow-md rounded-lg overflow-hidden">
             <div
               className="w-full h-40 bg-cover bg-center"
               style={{ backgroundImage: `url(/evening.jpg)` }}
@@ -240,7 +240,7 @@ function Blog({ data, router }) {
               </div>
             </div>
           </article>
-          <article className="shadow-lg rounded-lg overflow-hidden">
+          <article className="shadow-md rounded-lg overflow-hidden">
             <div
               className="w-full h-40 bg-cover bg-center"
               style={{ backgroundImage: `url(/car-repair.jpg)` }}
