@@ -16,6 +16,7 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const solutions = [
   {
@@ -61,17 +62,30 @@ const resources = [
     icon: QuestionMarkCircleIcon,
   },
 ];
-const recentPosts = [
-  { id: 1, name: "Jak se naučit programovat", href: "#" },
-  { id: 2, name: "Webová aplikace v Next.js", href: "#" },
-  { id: 3, name: "Úskalí frontend frameworků", href: "#" },
-];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Header() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [items, setItems] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/api/articles/recent")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          // setIsLoaded(true);
+          setItems(result);
+        },
+        (error) => {
+          // setIsLoaded(true);
+          // setError(error);
+        }
+      );
+  }, []);
   return (
     <Popover className="relative bg-white">
       {({ open }) => (
@@ -249,16 +263,16 @@ export default function Example() {
                                   Nedávné příspěvky
                                 </h3>
                                 <ul className="mt-4 space-y-4">
-                                  {recentPosts.map((post) => (
+                                  {items.map((post) => (
                                     <li
-                                      key={post.id}
+                                      key={post._id}
                                       className="text-base truncate"
                                     >
                                       <a
-                                        href={post.href}
+                                        href={post.slug}
                                         className="font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-200"
                                       >
-                                        {post.name}
+                                        {post.title}
                                       </a>
                                     </li>
                                   ))}
