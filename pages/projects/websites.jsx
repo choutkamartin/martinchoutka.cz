@@ -30,25 +30,49 @@ export default function Websites() {
               <span className="mr-4">
                 <Image
                   src="/icons/html5-brands.svg"
-                  width="50"
-                  height="50"
+                  width="40"
+                  height="40"
                   alt="Logo HTML5"
                 />
               </span>
               <span className="mr-4">
                 <Image
                   src="/icons/css3-brands.svg"
-                  width="50"
-                  height="50"
-                  alt="Logo HTML5"
+                  width="40"
+                  height="40"
+                  alt="Logo CSS3"
+                />
+              </span>
+              <span className="mr-4">
+                <Image
+                  src="/icons/js-brands.svg"
+                  width="40"
+                  height="40"
+                  alt="Logo JavaScript"
                 />
               </span>
               <span className="mr-4">
                 <Image
                   src="/icons/nextjs.svg"
-                  width="50"
-                  height="50"
-                  alt="Logo HTML5"
+                  width="70"
+                  height="40"
+                  alt="Logo Next.js"
+                />
+              </span>
+              <span className="mr-4">
+                <Image
+                  src="/icons/mongodb.svg"
+                  width="100"
+                  height="40"
+                  alt="Logo MongoDB"
+                />
+              </span>
+              <span className="mr-4">
+                <Image
+                  src="/icons/tailwind-css.svg"
+                  width="120"
+                  height="40"
+                  alt="Logo Tailwind CSS"
                 />
               </span>
             </div>
