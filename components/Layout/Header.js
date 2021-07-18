@@ -57,7 +57,7 @@ const resources = [
   {
     name: "O webu",
     description: "Jak je postavený tento web a jak si postavit svůj",
-    href: "#",
+    href: "/about-web",
     icon: QuestionMarkCircleIcon,
   },
 ];
