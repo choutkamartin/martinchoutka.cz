@@ -269,7 +269,7 @@ export default function Header() {
                                       className="text-base truncate"
                                     >
                                       <a
-                                        href={post.slug}
+                                        href={`/blog/${post.slug}`}
                                         className="font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-200"
                                       >
                                         {post.title}
