@@ -9,7 +9,7 @@ This is a repository of my website written in JavaScript, using Next.js and Tail
 - Next.js
   - Next-Auth
   - Date-fns
-  - Next
+  - next-i18next
 - Tailwind CSS
   - Heroicons
   - Headless UI
