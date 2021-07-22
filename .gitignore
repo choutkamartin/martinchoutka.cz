@@ -32,3 +32,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# aws
+.cdk.staging
+cdk.out
