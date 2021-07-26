@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
-export default function Example() {
+export default function Footer() {
+  const { t } = useTranslation("footer");
   return (
     <footer className="bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -9,32 +11,32 @@ export default function Example() {
           <div className="flex justify-center mb-6">
             <Link href="/">
               <a className="text-base font-medium text-gray-500 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100 mr-6">
-                Domů
+                {t("home")}
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/about-me">
               <a className="text-base font-medium text-gray-500 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100 mr-6">
-                O mně
+                {t("about-me")}
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/blog">
               <a className="text-base font-medium text-gray-500 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100 mr-6">
-                Projekty
+                {t("blog")}
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/contact">
               <a className="text-base font-medium text-gray-500 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100 mr-6">
-                Blog
-              </a>
-            </Link>
-            <Link href="/">
-              <a className="text-base font-medium text-gray-500 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100 mr-6">
-                Kontakt
+                {t("contact")}
               </a>
             </Link>
           </div>
           <div className="flex justify-center mb-4">
-            <a href="" className="mr-4">
+            <a
+              href="https://www.facebook.com/choutka.martin/"
+              className="mr-4"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Image
                 src="/icons/facebook-brands.svg"
                 width="25"
@@ -42,7 +44,12 @@ export default function Example() {
                 alt="Logo Facebook"
               />
             </a>
-            <a href="" className="mr-4">
+            <a
+              href="https://github.com/choutkamartin"
+              className="mr-4"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Image
                 src="/icons/github-brands.svg"
                 width="25"
@@ -50,7 +57,11 @@ export default function Example() {
                 alt="Logo GitHub"
               />
             </a>
-            <a href="">
+            <a
+              href="emailto:email@martinchoutka.cz"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Image
                 src="/icons/at-solid.svg"
                 width="25"
@@ -60,7 +71,13 @@ export default function Example() {
             </a>
           </div>
           <div className="flex justify-center text-gray-500 dark:text-gray-200 text-base">
-            <p>© Martin Choutka 2021</p>
+            <p>
+              ©{" "}
+              <Link href="/">
+                <a>Martin Choutka</a>
+              </Link>{" "}
+              {new Date().getFullYear()}
+            </p>
           </div>
         </div>
       </div>
