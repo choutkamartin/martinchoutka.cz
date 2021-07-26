@@ -7,7 +7,12 @@ import { useRouter } from "next/router";
 export async function getServerSideProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale, [
+        "common",
+        "header",
+        "footer",
+        "banner",
+      ])),
     },
   };
 }
@@ -17,7 +22,7 @@ export default function Login() {
   return (
     <>
       <Head>
-        <title>Martin Choutka - Přihlášení</title>
+        <title>{process.env.WEBSITE_NAME} - Přihlášení</title>
       </Head>
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -38,7 +43,7 @@ export default function Login() {
 
           <div>
             <button
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mb-3"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mb-3"
               onClick={() =>
                 signIn("facebook", {
                   callbackUrl: `http://localhost:3000${router.asPath}`,
@@ -47,14 +52,14 @@ export default function Login() {
             >
               <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                 <LockClosedIcon
-                  className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
+                  className="h-5 w-5 text-blue-500 group-hover:text-blue-400"
                   aria-hidden="true"
                 />
               </span>
               Facebook
             </button>
             <button
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               onClick={() =>
                 signIn("google", {
                   callbackUrl: `http://localhost:3000${router.asPath}`,
@@ -63,7 +68,7 @@ export default function Login() {
             >
               <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                 <LockClosedIcon
-                  className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
+                  className="h-5 w-5 text-blue-500 group-hover:text-blue-400"
                   aria-hidden="true"
                 />
               </span>

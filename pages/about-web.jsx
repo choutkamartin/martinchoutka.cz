@@ -5,7 +5,13 @@ import { useState } from "react";
 export async function getServerSideProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale, [
+        "common",
+        "header",
+        "footer",
+        "banner",
+        "websites",
+      ])),
     },
   };
 }
@@ -15,7 +21,7 @@ export default function AboutWeb() {
   const [result, setResult] = useState(null);
 
   function checkValue(value) {
-    if (value < 30 && value > 0) {
+    if (value <= 14 && value > 0) {
       setValue(value);
     }
   }
@@ -31,7 +37,7 @@ export default function AboutWeb() {
   return (
     <>
       <Head>
-        <title>Martin Choutka - O webu</title>
+        <title>{process.env.WEBSITE_NAME} - O webu</title>
       </Head>
       <main
         className="my-10 mx-auto max-w-7xl px-4 sm:my-12 sm:px-6 md:my-16 lg:my-20 lg:px-8 xl:my-28 bg-contain bg-no-repeat"
@@ -50,7 +56,7 @@ export default function AboutWeb() {
               >
                 Kolik dní
               </label>
-              <div className="inline-flex mt-1 bg-indigo-50 rounded-sm">
+              <div className="inline-flex mt-1 bg-blue-50 rounded-sm">
                 <button
                   className="px-4 py-3 text-md font-medium w-12"
                   onClick={() => checkValue(value + -1)}
@@ -63,7 +69,8 @@ export default function AboutWeb() {
                   name="number-of-days"
                   id="number-of-days"
                   value={value}
-                  className="text-md font-bold w-50 border-0 bg-indigo-50 sm:text-sm text-center w-auto"
+                  className="text-md font-bold border-0 bg-blue-50 sm:text-sm text-center w-40"
+                  readOnly
                 />
                 <button
                   className="px-4 py-3 text-md font-medium rounded-r-md w-12"
@@ -77,7 +84,7 @@ export default function AboutWeb() {
             <div className="py-3 text-left">
               <button
                 type="button"
-                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 onClick={() => checkResults()}
               >
                 Zkusit
@@ -100,7 +107,7 @@ export default function AboutWeb() {
             </div>
           )}
         </div>
-        <div className="w-8/12">
+        <div className="lg:w-8/12">
           <h2 className="text-lg font-bold text-gray-500">
             Ano, netrvá to tak dlouho
           </h2>
