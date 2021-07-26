@@ -18,7 +18,7 @@ export async function getStaticProps({ locale }) {
 
 export default function NotFound() {
   const { t } = useTranslation("404");
-  
+
   return (
     <>
       <Head>
