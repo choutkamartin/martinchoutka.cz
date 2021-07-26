@@ -8,12 +8,14 @@ import { format } from "date-fns";
 import { signIn, signOut, useSession } from "next-auth/client";
 import { LockClosedIcon } from "@heroicons/react/solid";
 import Comment from "../../components/Article/Comment";
+import absoluteUrl from "next-absolute-url";
 
-export async function getServerSideProps({ query, locale }) {
+export async function getServerSideProps({ req, query, locale }) {
   const slug = query.slug;
   const page = query.page || 1;
+  const { protocol, host } = absoluteUrl(req, "localhost:3000");
   const res = await fetch(
-    `${process.env.WEBSITE_URL}/api/articles/${slug}?page=${page}`
+    `${protocol}//${host}/api/articles/${slug}?page=${page}`
   );
   const data = await res.json();
   return {
@@ -40,7 +42,7 @@ function Article({ data, router }) {
   };
 
   const deleteComment = async (id) => {
-    await fetch(`${process.env.WEBSITE_URL}/api/comments/delete?id=${id}`, {
+    await fetch(`/api/comments/delete?id=${id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
@@ -50,7 +52,7 @@ function Article({ data, router }) {
   };
 
   useEffect(() => {
-    fetch(`${process.env.WEBSITE_URL}/api/articles`)
+    fetch(`/api/articles`)
       .then((res) => res.json())
       .then(
         (result) => {

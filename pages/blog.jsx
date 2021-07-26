@@ -6,10 +6,12 @@ import { useSession } from "next-auth/client";
 import Router, { withRouter } from "next/router";
 import ReactPaginate from "react-paginate";
 import { format } from "date-fns";
+import absoluteUrl from "next-absolute-url";
 
-export async function getServerSideProps({ locale, query }) {
+export async function getServerSideProps({ req, locale, query }) {
   const page = query.page || 1;
-  const res = await fetch(`${process.env.WEBSITE_URL}/api/articles?page=${page}`);
+  const { protocol, host } = absoluteUrl(req, "localhost:3000");
+  const res = await fetch(`${protocol}//${host}/api/articles?page=${page}`);
   const data = await res.json();
   return {
     props: {

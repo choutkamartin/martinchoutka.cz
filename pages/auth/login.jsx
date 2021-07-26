@@ -4,7 +4,7 @@ import { LockClosedIcon } from "@heroicons/react/solid";
 import { signIn } from "next-auth/client";
 import { useRouter } from "next/router";
 
-export async function getServerSideProps({ locale }) {
+export async function getStaticProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, [
