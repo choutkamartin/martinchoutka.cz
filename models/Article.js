@@ -25,6 +25,9 @@ const PostSchema = new mongoose.Schema({
       type: String,
     },
   ],
+  coverImage: {
+    type: String,
+  },
   comments: [
     {
       type: mongoose.Schema.Types.ObjectId,
