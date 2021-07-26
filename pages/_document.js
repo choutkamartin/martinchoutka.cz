@@ -18,6 +18,10 @@ class MyDocument extends Document {
             property="og:image"
             content="https://www.martinchoutka.cz/avatar.jpg"
           />
+          <meta
+            name="google-site-verification"
+            content="3GnJooLIfOWP8xVyjmTF_00SCM2F7raJyHcON5d2v10"
+          />
         </Head>
         <body className="dark:bg-gray-900">
           <Main />
