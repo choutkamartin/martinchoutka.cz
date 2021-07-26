@@ -5,8 +5,7 @@ export default function NotFound() {
   return (
     <>
       <Head>
-        <title>Martin Choutka - 404</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{process.env.WEBSITE_NAME} - 404</title>
       </Head>
       <main className="my-10 mx-auto max-w-7xl px-4 sm:my-12 sm:px-6 md:my-16 lg:my-20 lg:px-8 xl:my-28">
         <h1 className="text-5xl font-extrabold mb-4 text-blue-700">

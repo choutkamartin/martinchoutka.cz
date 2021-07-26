@@ -5,7 +5,13 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 export async function getServerSideProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale, [
+        "common",
+        "header",
+        "footer",
+        "banner",
+        "websites",
+      ])),
     },
   };
 }
@@ -14,7 +20,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Martin Choutka - Úvod</title>
+        <title>{process.env.WEBSITE_NAME} - Úvod</title>
       </Head>
       <HeroComponent />
     </>
