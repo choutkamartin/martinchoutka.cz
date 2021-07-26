@@ -47,7 +47,7 @@ function NewArticle() {
     var obj = {};
     obj.formData = getValues();
     obj.coverImage = coverImage;
-    const res = await fetch("/api/articles/new", {
+    const res = await fetch(`${process.env.WEBSITE_URL}/api/articles/new`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",

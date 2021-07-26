@@ -9,7 +9,7 @@ import { format } from "date-fns";
 
 export async function getServerSideProps({ locale, query }) {
   const page = query.page || 1;
-  const res = await fetch(`http://localhost:3000/api/articles?page=${page}`);
+  const res = await fetch(`${process.env.WEBSITE_URL}/api/articles?page=${page}`);
   const data = await res.json();
   return {
     props: {
