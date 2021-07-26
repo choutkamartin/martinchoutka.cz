@@ -1,0 +1,15 @@
+{
+  "translations": "Translations",
+  "translations-description": "Translations of applications and programs into the Czech language from English",
+  "selected-translations": "Selected translations",
+  "bitwarden-subheading": "Password manager, available on the vast majority of devices",
+  "bitwarden-description": "I have been translating the project continuously since June 2019. During that time, I participated in the translation of 350+ strings together with other translators.",
+  "bitwarden-timespan": "Operation: June 2019 - until now",
+  "bouncer-subheading": "Application for managing or deleting permissions on Android",
+  "bouncer-description": "The application is translated in its entirety, some translations have not yet been updated by the developer in the application.",
+  "bouncer-timespan": "Operation: June 2019 - until now",
+  "sharex-subheading": "The best screenshot program for Windows",
+  "sharex-description": "I have been translating the project continuously since July 2021. I also contribute code to the project.",
+  "sharex-timespan": "Operation: June 2021 - until now",
+  "translation-website": "Project page"
+}

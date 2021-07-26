@@ -1,0 +1,7 @@
+{
+  "website-martin-choutka-heading-1": "Blog martinchoutka.cz",
+  "website-martin-choutka-heading-2": "Můj osobní blog napsaný v Next.js",
+  "website-martin-choutka-paragraph": "Webová stránka a blog napsaný pomocí NextJS. Design vytvořený s pomocí Tailwind CSS. Databáze MongoDB a Mongoose pro objektové modelování. Manipulaci s autorizací zajišťuje Next Auth, manipulaci s daty date-fns, úložiště souborů díky Amazon S3.",
+  "technology": "Technologie",
+  "source-code": "Zdrojový kód"
+}

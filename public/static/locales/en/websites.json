@@ -1,0 +1,7 @@
+{
+  "website-martin-choutka-heading-1": "Blog martinchoutka.cz",
+  "website-martin-choutka-heading-2": "My personal blog written in Next.js",
+  "website-martin-choutka-paragraph": "Website and blog written using NextJS. Design created with the help of Tailwind CSS. MongoDB and Mongoose databases for object modeling. Authorization is handled by Next Auth, date-fns data manipulation, file storage thanks to Amazon S3.",
+  "technology": "Technology",
+  "source-code": "Source code"
+}
