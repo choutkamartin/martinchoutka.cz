@@ -8,12 +8,14 @@ import { format } from "date-fns";
 import { signIn, signOut, useSession } from "next-auth/client";
 import { LockClosedIcon } from "@heroicons/react/solid";
 import Comment from "../../components/Article/Comment";
+import absoluteUrl from "next-absolute-url";
 
-export async function getServerSideProps({ query, locale }) {
+export async function getServerSideProps({ req, query, locale }) {
   const slug = query.slug;
   const page = query.page || 1;
+  const { protocol, host } = absoluteUrl(req, "localhost:3000");
   const res = await fetch(
-    `http://localhost:3000/api/articles/${slug}?page=${page}`
+    `${protocol}//${host}/api/articles/${slug}?page=${page}`
   );
   const data = await res.json();
   return {
@@ -40,7 +42,7 @@ function Article({ data, router }) {
   };
 
   const deleteComment = async (id) => {
-    await fetch(`http://localhost:3000/api/comments/delete?id=${id}`, {
+    await fetch(`/api/comments/delete?id=${id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
@@ -50,7 +52,7 @@ function Article({ data, router }) {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/articles")
+    fetch(`/api/articles`)
       .then((res) => res.json())
       .then(
         (result) => {
@@ -236,7 +238,7 @@ function Article({ data, router }) {
                     className="group relative w-44 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mr-3"
                     onClick={() =>
                       signIn("facebook", {
-                        callbackUrl: `http://localhost:3000${router.asPath}`,
+                        callbackUrl: `${process.env.WEBSITE_URL}${router.asPath}`,
                       })
                     }
                   >

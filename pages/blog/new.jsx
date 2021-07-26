@@ -8,7 +8,7 @@ import { useState } from "react";
 import Head from "next/head";
 import AccessDenied from "../../components/AccessDenied";
 
-export async function getServerSideProps({ locale }) {
+export async function getStaticProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, [
@@ -47,7 +47,7 @@ function NewArticle() {
     var obj = {};
     obj.formData = getValues();
     obj.coverImage = coverImage;
-    const res = await fetch("/api/articles/new", {
+    const res = await fetch(`/api/articles/new`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",

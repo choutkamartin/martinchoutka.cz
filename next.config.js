@@ -3,6 +3,7 @@ module.exports = {
     BUCKET_NAME: process.env.BUCKET_NAME,
     REGION: process.env.REGION,
     WEBSITE_NAME: process.env.WEBSITE_NAME,
+    WEBSITE_URL: process.env.WEBSITE_URL,
   },
   i18n: {
     defaultLocale: "cs",

@@ -86,7 +86,7 @@ export default function Header() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/articles/recent")
+    fetch("/api/articles/recent")
       .then((res) => res.json())
       .then(
         (result) => {
