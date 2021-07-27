@@ -11,7 +11,7 @@ export const getServerSideProps = async ({ req, res }) => {
     (dynamicPage) => `blog/${dynamicPage.slug}`
   );
   const staticPages = await globby([
-    "/",
+    "./",
     "!pages/api",
     "!pages/_app.js",
     "!pages/_document.js",
