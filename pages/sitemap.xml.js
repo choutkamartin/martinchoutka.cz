@@ -12,6 +12,7 @@ export const getServerSideProps = async ({ req, res }) => {
   );
   const staticPages = await globby([
     "./",
+    "!node_modules",
     "!pages/api",
     "!pages/_app.js",
     "!pages/_document.js",
