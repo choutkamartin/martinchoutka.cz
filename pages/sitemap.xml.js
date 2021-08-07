@@ -23,12 +23,12 @@ export const getServerSideProps = async ({ req, res }) => {
     xmlns:xhtml="http://www.w3.org/1999/xhtml">
       ${pages
         .map((url) => {
-          const path = url;
-          // .replace("pages/", "")
-          // .replace(".jsx", "")
-          // .replace(".js", "")
-          // .replace(".mdx", "")
-          // .replace("index", "");
+          const path = url
+            .replace("pages/", "")
+            .replace(".jsx", "")
+            .replace(".js", "")
+            .replace(".mdx", "")
+            .replace("index", "");
           return `
             <url>
               <loc>${protocol}//${host}/${path}</loc>

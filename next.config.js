@@ -4,6 +4,7 @@ module.exports = {
     REGION: process.env.REGION,
     WEBSITE_NAME: process.env.WEBSITE_NAME,
     WEBSITE_URL: process.env.WEBSITE_URL,
+    NEXTAUTH_URL: process.env.NEXTAUTH_URL,
   },
   i18n: {
     defaultLocale: "cs",
