@@ -1,7 +1,7 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Step1 } from "../../components/Form/Step1";
 import { Step2 } from "../../components/Form/Step2";
-import { useSession } from "next-auth/client";
+import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
@@ -33,7 +33,9 @@ function NewArticle() {
   const router = useRouter();
   const [english, setEnglish] = useState(false);
   const [coverImage, setCoverImage] = useState("");
-  const [session, loading] = useSession();
+  const { data: session, status } = useSession();
+  const loading = status === "loading";
+
   if (!session) {
     return <AccessDenied />;
   }

@@ -1,15 +1,17 @@
 import "tailwindcss/tailwind.css";
 import { appWithTranslation } from "next-i18next";
 import { Layout } from "../components/Layout/Layout";
-import { Provider } from "next-auth/client";
+import { SessionProvider } from "next-auth/react";
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps: { session, ...pageProps } }) => {
   return (
-    <Provider session={pageProps.session}>
+    // `session` comes from `getServerSideProps` or `getInitialProps`.
+    // Avoids flickering/session loading on first load.
+    <SessionProvider session={session} refetchInterval={5 * 60}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </Provider>
+    </SessionProvider>
   );
 };
 

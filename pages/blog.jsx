@@ -2,7 +2,7 @@ import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { useSession } from "next-auth/client";
+import { useSession } from "next-auth/react";
 import Router, { withRouter } from "next/router";
 import ReactPaginate from "react-paginate";
 import { format } from "date-fns";
@@ -27,7 +27,8 @@ export async function getServerSideProps({ req, locale, query }) {
 }
 
 function Blog({ data, router }) {
-  const [session, loading] = useSession();
+  const { data: session, status } = useSession();
+  const loading = status === "loading";
   const [isLoading, setLoading] = useState(false);
   const startLoading = () => setLoading(true);
   const stopLoading = () => setLoading(false);
