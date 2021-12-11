@@ -1,8 +1,5 @@
 import dbConnect from "../../../utils/dbConnect";
 import Article from "../../../models/Article";
-import Comment from "../../../models/Comment";
-import User from "../../../models/User";
-import { getSession } from "next-auth/client";
 
 export default async function handler(req, res) {
   await dbConnect();
