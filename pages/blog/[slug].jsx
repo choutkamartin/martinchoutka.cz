@@ -5,7 +5,7 @@ import ReactPaginate from "react-paginate";
 import Router, { withRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
-import { signIn, signOut, useSession } from "next-auth/client";
+import { signIn, signOut, useSession } from "next-auth/react";
 import { LockClosedIcon } from "@heroicons/react/solid";
 import Comment from "../../components/Article/Comment";
 import absoluteUrl from "next-absolute-url";
@@ -34,7 +34,8 @@ export async function getServerSideProps({ req, query, locale }) {
 }
 
 function Article({ data, router }) {
-  const [session, loading] = useSession();
+  const { data: session, status } = useSession();
+  const loading = status === "loading";
   const [otherArticles, setOtherArticles] = useState([]);
 
   const refreshData = () => {

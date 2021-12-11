@@ -1,3 +1,5 @@
+const { i18n } = require("./next-i18next.config");
+
 module.exports = {
   env: {
     BUCKET_NAME: process.env.BUCKET_NAME,
@@ -6,10 +8,7 @@ module.exports = {
     WEBSITE_URL: process.env.WEBSITE_URL,
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
   },
-  i18n: {
-    defaultLocale: "cs",
-    locales: ["cs", "en"],
-  },
+  i18n,
   images: {
     domains: [
       "lh3.googleusercontent.com",

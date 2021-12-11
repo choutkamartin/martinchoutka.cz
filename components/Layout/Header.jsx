@@ -17,7 +17,7 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { signOut, useSession } from "next-auth/client";
+import { signOut, useSession } from "next-auth/react";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { useTranslation } from "next-i18next";
 
@@ -80,7 +80,8 @@ export default function Header() {
     },
   ];
 
-  const [session, loading] = useSession();
+  const { data: session, status } = useSession();
+  const loading = status === "loading";
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);

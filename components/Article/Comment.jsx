@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { format } from "date-fns";
-import { useSession } from "next-auth/client";
+import { useSession } from "next-auth/react";
 import { XCircleIcon } from "@heroicons/react/outline";
 import Modal from "../Modal";
 import Image from "next/image";

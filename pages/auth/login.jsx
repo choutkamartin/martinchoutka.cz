@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { LockClosedIcon } from "@heroicons/react/solid";
-import { signIn } from "next-auth/client";
+import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 
 export async function getStaticProps({ locale }) {
