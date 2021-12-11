@@ -58,7 +58,7 @@ export default function Footer() {
               />
             </a>
             <a
-              href="emailto:email@martinchoutka.cz"
+              href="mailto:email@martinchoutka.cz"
               target="_blank"
               rel="noreferrer"
             >
